@@ -3,8 +3,8 @@ import mergeWith from "@unction/mergewith"
 import isObject from "@unction/isobject"
 import isArray from "@unction/isarray"
 
-export default function mergeDeepRight (left: IterableType): Function {
-  return function mergeDeepRightRight (right: IterableType): IterableType {
+export default function mergeDeepRight (left: FunctorType): Function {
+  return function mergeDeepRightRight (right: FunctorType): FunctorType {
     if (isArray(left) && isArray(right)) {
       return mergeRight(left)(right)
     }
