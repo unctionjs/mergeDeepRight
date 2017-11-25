@@ -1,6 +1,6 @@
 {
   "name": "@unction/mergedeepright",
-  "version": "2.44.0",
+  "version": "2.45.0",
   "description": "Takes a left and right collection and recuresively combines them prefering right: merge for Object and concat for Array",
   "keywords": [
     "unction",
