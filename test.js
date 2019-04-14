@@ -1,7 +1,7 @@
 /* eslint-disable flowtype/require-return-type */
-import {test} from "tap"
+import {test} from "tap";
 
-import mergeDeepRight from "./index"
+import mergeDeepRight from "./index";
 
 test(({same, end}) => {
   same(
@@ -10,10 +10,10 @@ test(({same, end}) => {
       alpha: "1",
       beta: "2",
     }
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test(({same, end}) => {
   same(
@@ -22,33 +22,33 @@ test(({same, end}) => {
       gamma: {
         alpha: "1",
         beta: "2",
-      }
+      },
     }
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test(({same, end}) => {
   same(
     mergeDeepRight({alpha: {alpha: "1"}})({beta: {beta: "2"}}),
     {
       alpha: {alpha: "1"},
-      beta: {beta: "2"}
+      beta: {beta: "2"},
     }
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test(({same, end}) => {
   same(
     mergeDeepRight({alpha: {alpha: "1"}})({alpha: {alpha: "2"}}),
     {alpha: {alpha: "2"}}
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test(({same, end}) => {
   same(
@@ -57,10 +57,10 @@ test(({same, end}) => {
       "a",
       "b",
     ]
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test(({same, end}) => {
   same(
@@ -69,10 +69,10 @@ test(({same, end}) => {
       "a",
       "a",
     ]
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test(({same, end}) => {
   same(
@@ -81,9 +81,9 @@ test(({same, end}) => {
       alpha: [
         "a",
         "a",
-      ]
+      ],
     }
-  )
+  );
 
-  end()
-})
+  end();
+});
