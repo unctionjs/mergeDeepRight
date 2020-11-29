@@ -2,10 +2,9 @@ import mergeRight from "@unction/mergeright";
 import mergeWith from "@unction/mergewith";
 import isObject from "@unction/isobject";
 import isArray from "@unction/isarray";
-import {EnumerableType} from "./types";
 
-export default function mergeDeepRight<A> (left: EnumerableType<A>) {
-  return function mergeDeepRightRight (right: EnumerableType<A>): EnumerableType<A> {
+export default function mergeDeepRight<A> (left: Array<A> | Set<A> | RecordType<unknown, A> | string) {
+  return function mergeDeepRightRight (right: Array<A> | Set<A> | RecordType<unknown, A> | string): Array<A> | Set<A> | RecordType<unknown, A> | string {
     if (isArray(left) && isArray(right)) {
       return mergeRight(left)(right);
     }
